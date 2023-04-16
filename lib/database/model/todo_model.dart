@@ -1,9 +1,13 @@
+import 'package:todo/database/model/task_model.dart';
+
 class TodoModel {
   TodoModel(this.name, {this.id, this.createdAt});
 
   int? id;
   String? createdAt;
   String name;
+
+  List<TaskModel> tasks = [];
 
   Map<String, dynamic> toJson() {
     Map<String, dynamic> json = {};
